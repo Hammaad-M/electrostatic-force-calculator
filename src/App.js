@@ -34,7 +34,7 @@ function App() {
   const [chart, setChart] = useState();
   const canvas = useRef();
 
-  const format = (num) => parseFloat(num.toFixed(5));
+  const format = (num) => parseFloat(num.toFixed(9));
 
   function addMeasurement(e) {
     e.preventDefault();
@@ -46,7 +46,7 @@ function App() {
     const [q1, q2, d] = numericalInputs;
     const K = 9 * 10 ** 9;
     const force = (K * (q1 * q2)) / d ** 2;
-
+    console.log(numericalInputs, K, force);
     // addPoint(chart, label, force);
     setData([
       ...data,
