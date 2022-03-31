@@ -36,6 +36,9 @@ body {
   section {
     @apply lg:grid lg:grid-cols-6 lg:grid-rows-2 lg:justify-center lg:items-center lg:gap-y-4;
   }
+  div {
+    @apply text-ellipsis;
+  }
 }
 
 @tailwind utilities;

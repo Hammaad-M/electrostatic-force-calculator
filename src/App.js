@@ -8,7 +8,6 @@ function App() {
   const [charge2, setCharge2] = useState("");
   const [distance, setDistance] = useState("");
   const [label, setLabel] = useState("");
-  const [force, setForce] = useState(null);
   const [data, setData] = useState([
     {
       charge1: 0.005,
@@ -35,7 +34,7 @@ function App() {
   const [chart, setChart] = useState();
   const canvas = useRef();
 
-  const format = (num) => num.toFixed(3);
+  const format = (num) => parseFloat(num.toFixed(5));
 
   // function addPoint(chart, label, data) {
   //   chart.data.labels.push(label);
