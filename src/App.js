@@ -106,9 +106,19 @@ function App() {
   function removeData(chart) {
     chart.data.labels.pop();
     chart.data.datasets.forEach((dataset) => {
-      dataset.data.pop();
+      dataset.data = [];
     });
     chart.update();
+  }
+  function removeDataEntry(index) {
+    const newData = [];
+    data.forEach((d, i) => {
+      if (i !== index) {
+        newData.push(d);
+      }
+    });
+    // removePoint(chart, index);
+    setData(newData);
   }
 
   useEffect(() => {
@@ -188,7 +198,7 @@ function App() {
             <div className="relative card py-3 bg-blue-300 text-black opacity-80 rounded-md">
               <div
                 onClick={() => {
-                  removeData(i);
+                  removeDataEntry(i);
                 }}
                 className="absolute top-2 right-2 w-5 sm:w-6 cursor-pointer"
               >
