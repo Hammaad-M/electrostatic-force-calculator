@@ -104,7 +104,7 @@ function App() {
   }
 
   function removeData(chart) {
-    chart.data.labels.pop();
+    chart.data.labels = [];
     chart.data.datasets.forEach((dataset) => {
       dataset.data = [];
     });
