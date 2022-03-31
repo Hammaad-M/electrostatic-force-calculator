@@ -34,7 +34,7 @@ body {
     @apply px-4 sm:px-6 md:px-12;
   }
   section {
-    @apply lg:grid lg:grid-cols-6 lg:grid-rows-2 lg:justify-center lg:items-center lg:gap-y-4;
+    @apply lg:grid lg:grid-cols-6 lg:justify-center lg:items-center lg:gap-y-4;
   }
   div {
     @apply text-ellipsis;

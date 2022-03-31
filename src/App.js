@@ -36,29 +36,6 @@ function App() {
 
   const format = (num) => parseFloat(num.toFixed(5));
 
-  // function addPoint(chart, label, data) {
-  //   chart.data.labels.push(label);
-  //   chart.data.datasets.forEach((dataset) => {
-  //     dataset.data.push(data);
-  //   });
-  //   chart.update();
-  // }
-  // function removePoint(chart, index) {
-  //   chart.data.datasets = chart.data.datasets.filter((d, i) =>
-  //     i === index ? false : true
-  //   );
-  //   chart.update();
-  // }
-  function removeData(index) {
-    const newData = [];
-    data.forEach((d, i) => {
-      if (i !== index) {
-        newData.push(d);
-      }
-    });
-    // removePoint(chart, index);
-    setData(newData);
-  }
   function addMeasurement(e) {
     e.preventDefault();
     let numericalInputs = [charge1, charge2, distance];
@@ -149,7 +126,7 @@ function App() {
         ElectroStatic Force Calculator
       </h1>
 
-      <section class="md:my-10">
+      <section class="md:my-10 lg:h-min">
         <form
           id="form"
           onSubmit={addMeasurement}
@@ -239,10 +216,10 @@ function App() {
           ))}
         </div>
       </section>
-      <p>
+      <p className="lg:cols-span-2 lg:justify-center lg:place-self-center md:text-lg lg:text-xl">
         ©2022{" "}
         <a
-          className="underline"
+          className="underline lg:-mt-96"
           target="_blank"
           href="https://hammaadmemon.com"
         >
