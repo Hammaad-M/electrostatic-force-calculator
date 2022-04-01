@@ -34,7 +34,7 @@ function App() {
   const [chart, setChart] = useState();
   const canvas = useRef();
 
-  const format = (num) => parseFloat(num.toFixed(9));
+  const format = (num) => parseFloat(num.toFixed(15));
 
   function addMeasurement(e) {
     e.preventDefault();
